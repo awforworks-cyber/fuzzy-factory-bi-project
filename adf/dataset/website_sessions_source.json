@@ -1,0 +1,61 @@
+{
+	"name": "website_sessions_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Source_Fuzzy_factory_data",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "website_sessions.csv",
+				"folderPath": "fuzzy-factory-folder/raw",
+				"container": "fuzzy-factory-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "website_session_id",
+				"type": "String"
+			},
+			{
+				"name": "created_at",
+				"type": "String"
+			},
+			{
+				"name": "user_id",
+				"type": "String"
+			},
+			{
+				"name": "is_repeat_session",
+				"type": "String"
+			},
+			{
+				"name": "utm_source",
+				"type": "String"
+			},
+			{
+				"name": "utm_campaign",
+				"type": "String"
+			},
+			{
+				"name": "utm_content",
+				"type": "String"
+			},
+			{
+				"name": "device_type",
+				"type": "String"
+			},
+			{
+				"name": "http_referer",
+				"type": "String"
+			}
+		]
+	}
+}
