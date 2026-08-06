@@ -1,0 +1,56 @@
+{
+	"name": "website_sessions_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Fuzzy_Factory_DB_Sink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "website_session_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "created_at",
+				"type": "datetime2",
+				"scale": 0
+			},
+			{
+				"name": "user_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "is_repeat_session",
+				"type": "bit"
+			},
+			{
+				"name": "utm_source",
+				"type": "nvarchar"
+			},
+			{
+				"name": "utm_campaign",
+				"type": "nvarchar"
+			},
+			{
+				"name": "utm_content",
+				"type": "nvarchar"
+			},
+			{
+				"name": "device_type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "http_referer",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "website_sessions"
+		}
+	}
+}

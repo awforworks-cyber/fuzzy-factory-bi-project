@@ -1,0 +1,57 @@
+{
+	"name": "orders_copy",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Source_Fuzzy_factory_data",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "orders.csv",
+				"folderPath": "fuzzy-factory-folder/raw",
+				"container": "fuzzy-factory-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "order_id",
+				"type": "String"
+			},
+			{
+				"name": "created_at",
+				"type": "String"
+			},
+			{
+				"name": "website_session_id",
+				"type": "String"
+			},
+			{
+				"name": "user_id",
+				"type": "String"
+			},
+			{
+				"name": "primary_product_id",
+				"type": "String"
+			},
+			{
+				"name": "items_purchased",
+				"type": "String"
+			},
+			{
+				"name": "price_usd",
+				"type": "String"
+			},
+			{
+				"name": "cogs_usd",
+				"type": "String"
+			}
+		]
+	}
+}

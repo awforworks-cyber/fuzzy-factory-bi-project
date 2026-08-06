@@ -1,0 +1,53 @@
+{
+	"name": "order_items_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Fuzzy_Factory_DB_Sink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "order_item_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "created_at",
+				"type": "varchar"
+			},
+			{
+				"name": "order_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "product_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "is_primary_item",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "price_usd",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 2
+			},
+			{
+				"name": "cogs_usd",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 2
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "order_items"
+		}
+	}
+}

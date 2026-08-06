@@ -1,0 +1,41 @@
+{
+	"name": "website_pageviews_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Source_Fuzzy_factory_data",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "website_pageviews.csv",
+				"folderPath": "fuzzy-factory-folder/raw",
+				"container": "fuzzy-factory-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "website_pageview_id",
+				"type": "String"
+			},
+			{
+				"name": "created_at",
+				"type": "String"
+			},
+			{
+				"name": "website_session_id",
+				"type": "String"
+			},
+			{
+				"name": "pageview_url",
+				"type": "String"
+			}
+		]
+	}
+}

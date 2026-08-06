@@ -1,0 +1,36 @@
+{
+	"name": "website_pageviews_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Fuzzy_Factory_DB_Sink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "website_pageview_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "created_at",
+				"type": "datetime2",
+				"scale": 0
+			},
+			{
+				"name": "website_session_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "pageview_url",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "website_pageviews"
+		}
+	}
+}

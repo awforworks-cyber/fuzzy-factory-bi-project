@@ -1,0 +1,30 @@
+{
+	"name": "products_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Fuzzy_Factory_DB_Sink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "product_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "created_at",
+				"type": "varchar"
+			},
+			{
+				"name": "product_name",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "products"
+		}
+	}
+}
