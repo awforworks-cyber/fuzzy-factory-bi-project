@@ -52,7 +52,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "orders_raw"
+			"table": "orders"
 		}
 	}
 }
