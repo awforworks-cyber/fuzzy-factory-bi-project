@@ -36,7 +36,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "order_item_refunds_raw"
+			"table": "order_item_refunds"
 		}
 	}
 }
