@@ -47,7 +47,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "order_items_raw"
+			"table": "order_items"
 		}
 	}
 }
